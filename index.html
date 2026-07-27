@@ -206,6 +206,18 @@
   .chapter:hover .read svg { transform: translateX(5px); }
   @media (max-width: 520px) { .chapter { grid-template-columns: 96px 1fr; gap: 18px; } }
 
+  /* ── Podcasts / Featured On ── */
+  .pods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 6px; }
+  @media (max-width: 860px) { .pods { grid-template-columns: 1fr; } }
+  .pod { display: flex; flex-direction: column; border-top: 1px solid var(--line); padding: 30px 0 0; text-decoration: none; color: inherit; transition: border-color .3s ease; }
+  .pod:hover { border-color: var(--brass); }
+  .pod-show { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 16px; }
+  .pod-title { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.4rem; line-height: 1.26; color: var(--ink); margin: 0 0 12px; }
+  .pod-host { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+  .pod .read { display: inline-flex; align-items: center; gap: 9px; margin-top: auto; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+  .pod .read svg { width: 14px; height: 14px; transition: transform .25s ease; }
+  .pod:hover .read svg { transform: translateX(5px); }
+
   /* ── About ── */
   #about .about-eyebrow { display: flex; justify-content: center; margin-bottom: 40px; }
   #about .about-copy { max-width: 860px; margin: 64px auto 0; text-align: center; }
@@ -234,6 +246,7 @@
   <div class="nav-inner">
     <div class="nav-links">
       <a href="#strategist">Strategist</a>
+      <a href="#podcasts">Podcasts</a>
       <a href="#speaker">Speaker</a>
       <a href="#author">Storyteller</a>
       <a href="#about">About</a>
@@ -279,10 +292,38 @@
   </div>
 </section>
 
-<!-- ── 02 · SPEAKER ── -->
+<!-- ── 02 · PODCASTS ── -->
+<section id="podcasts" class="paper2">
+  <div class="container reveal">
+    <div class="eyebrow mt-eyebrow"><span class="num">02</span> &nbsp;Featured On</div>
+    <p class="book-line">Conversations on business, marketing &amp; the entrepreneurial life.</p>
+    <div class="pods">
+      <a class="pod" href="https://copychief.com/ep-126-damian-lanfranchi/" target="_blank" rel="noopener">
+        <div class="pod-show">Copy Chief Radio · Ep 126</div>
+        <h3 class="pod-title">The Secret to an Entrepreneurial Life That'll Never Pass You By</h3>
+        <div class="pod-host">with Kevin Rogers</div>
+        <span class="read">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="pod" href="https://justthetipsshow.com/finding-the-right-business-partner-with-damian-lanfranchi-ep-204/" target="_blank" rel="noopener">
+        <div class="pod-show">Just the Tips Show · Ep 204</div>
+        <h3 class="pod-title">Finding the Right Business Partner</h3>
+        <div class="pod-host">with James P. Friel &amp; Dean Holland</div>
+        <span class="read">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="pod" href="https://www.youtube.com/watch?v=eEErGv7BQZY" target="_blank" rel="noopener">
+        <div class="pod-show">YouTube Interview</div>
+        <h3 class="pod-title">How to Build a Successful Business Based on Educational Marketing</h3>
+        <div class="pod-host">Watch on YouTube</div>
+        <span class="read">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 03 · SPEAKER ── -->
 <section id="speaker" class="dark on-dark" style="background:#171c22;">
   <div class="container reveal">
-    <div class="eyebrow mt-eyebrow"><span class="num">02</span> &nbsp;Speaker</div>
+    <div class="eyebrow mt-eyebrow"><span class="num">03</span> &nbsp;Speaker</div>
 
     <div class="speaker-top">
       <div class="audio-card">
@@ -313,7 +354,7 @@
 <!-- ── 04 · AUTHOR ── -->
 <section id="author" class="paper2">
   <div class="container reveal">
-    <div class="eyebrow mt-eyebrow"><span class="num">03</span> &nbsp;Storyteller</div>
+    <div class="eyebrow mt-eyebrow"><span class="num">04</span> &nbsp;Storyteller</div>
     <p class="book-line">Samples from Damian's book, <em>From Brooklyn to Windy Hill.</em></p>
     <p class="book-note">Read a sample chapter.</p>
     <div class="chapters">
