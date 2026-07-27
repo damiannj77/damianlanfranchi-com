@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damian Lanfranchi — Business Strategist, Speaker, Storyteller</title>
+<meta name="description" content="Damian Lanfranchi. Business Strategist, Speaker, Storyteller. Business partner of Todd Brown and the E5 Agency.">
+<meta property="og:title" content="Damian Lanfranchi">
+<meta property="og:description" content="Business Strategist. Speaker. Storyteller.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #13171c;
+    --ink-2: #1c222a;
+    --paper: #f6f2ea;      /* warm bone */
+    --paper-2: #efe9dd;
+    --brass: #b5894c;
+    --brass-2: #916b34;
+    --muted: #6d6559;
+    --line: rgba(19,23,28,.14);
+    --line-light: rgba(255,255,255,.16);
+    --container: 1140px;
+    --text: 720px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink); background: var(--paper);
+    line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--brass); color: #fff; }
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 640px) { .container { padding: 0 24px; } }
+
+  h1, h2, h3, .display { font-family: 'Fraunces', Georgia, serif; font-weight: 400; line-height: 1.06; letter-spacing: -0.01em; }
+
+  /* ── Eyebrow ── */
+  .eyebrow { display: inline-flex; align-items: center; gap: 14px; font-family: 'Inter', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--brass-2); }
+  .eyebrow .num { font-variant-numeric: tabular-nums; }
+  .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--brass); }
+  .on-dark .eyebrow, section.dark .eyebrow { color: #cfa96a; }
+
+  /* ── Nav ── */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .35s ease, box-shadow .35s ease, padding .35s ease; padding: 26px 0; }
+  .nav.solid { background: rgba(246,242,234,.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); padding: 15px 0; }
+  .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .nav-links { display: flex; align-items: center; gap: 44px; }
+  .nav-links a { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: #d0a967; transition: color .25s ease; }
+  .nav.solid .nav-links a { color: var(--brass-2); }
+  .nav-links a:hover, .nav.solid .nav-links a:hover { color: var(--brass); }
+  .nav-cta { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; border: 1px solid rgba(255,255,255,.45); padding: 11px 24px; border-radius: 2px; color: #fff; text-decoration: none; transition: all .25s ease; }
+  .nav.solid .nav-cta { border-color: var(--ink); color: var(--ink); }
+  .nav-cta:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
+  @media (max-width: 720px) {
+    .nav { padding: 18px 0; }
+    .nav-inner { justify-content: center; padding: 0 20px; }
+    .nav-links { gap: 14px 18px; flex-wrap: wrap; justify-content: center; }
+    .nav-links a { font-size: 12px; letter-spacing: .08em; }
+    .nav-cta { display: none; }
+  }
+
+  /* ── Hero ── */
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end;
+    background: linear-gradient(180deg, rgba(12,15,19,.45) 0%, rgba(12,15,19,.05) 30%, rgba(12,15,19,.35) 62%, rgba(12,15,19,.9) 100%), url('assets/hero.jpg');
+    background-size: cover; background-position: 58% 32%; color: #fff; }
+  .hero-inner { max-width: var(--container); width: 100%; margin: 0 auto; padding: 0 40px 84px; }
+  @media (max-width: 640px) { .hero-inner { padding: 0 24px 60px; } }
+  .hero h1 { font-size: clamp(2.6rem, 10vw, 7.2rem); font-weight: 300; letter-spacing: -0.02em; margin-top: 22px; text-shadow: 0 2px 40px rgba(0,0,0,.35); overflow-wrap: break-word; }
+  .hero .sub { margin-top: 24px; font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
+    font-size: clamp(1.1rem, 2.6vw, 1.6rem); color: #eadfce; max-width: 30ch; }
+  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); color: rgba(255,255,255,.55); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .scroll-cue span.bar { width: 1px; height: 40px; background: linear-gradient(rgba(255,255,255,.6), transparent); animation: drop 2.4s ease-in-out infinite; }
+  @keyframes drop { 0%,100%{ opacity:.3; transform: scaleY(.6); transform-origin: top;} 50%{ opacity:1; transform: scaleY(1);} }
+
+  /* ── Sections ── */
+  section { padding: 108px 0; position: relative; }
+  section.dark { background: var(--ink); color: #f2ede4; }
+  section.paper2 { background: var(--paper-2); }
+  @media (max-width: 640px) { section { padding: 72px 0; } }
+
+  .mt-eyebrow { margin-bottom: 34px; }
+  .lead-para { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.5rem, 3.3vw, 2.35rem);
+    line-height: 1.4; letter-spacing: -0.01em; color: var(--ink); max-width: 900px; }
+  section.dark .lead-para { color: #fbf7f0; }
+
+  /* ── Full-bleed image band ── */
+  .band { width: 100%; margin-top: 80px; overflow: hidden; position: relative; }
+  .band img { width: 100%; height: 82vh; max-height: 860px; min-height: 460px; object-fit: cover; display: block; }
+  @media (max-width: 640px) { .band img { height: 64vh; min-height: 380px; } }
+  .band .caption { position: absolute; left: 40px; bottom: 30px; color: #fff; font-family: 'Inter', sans-serif;
+    font-size: 12px; letter-spacing: .22em; text-transform: uppercase; text-shadow: 0 1px 20px rgba(0,0,0,.6);
+    display: flex; align-items: center; gap: 12px; }
+  .band .caption::before { content: ""; width: 26px; height: 1px; background: var(--brass); }
+
+  /* ── Buttons / links ── */
+  .btn { display: inline-flex; align-items: center; gap: 11px; padding: 17px 36px; border-radius: 2px;
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; transition: background .25s ease, color .25s ease, transform .25s ease; }
+  .btn-ink { background: var(--ink); color: var(--paper); }
+  .btn-ink:hover { background: var(--brass-2); transform: translateY(-2px); }
+  .btn-light { background: var(--paper); color: var(--ink); }
+  .btn-light:hover { background: var(--brass); color: #fff; transform: translateY(-2px); }
+  .btn-outline { border: 1px solid currentColor; color: inherit; }
+  .btn-outline:hover { background: var(--brass); border-color: var(--brass); color: #fff; transform: translateY(-2px); }
+  .btn svg { width: 15px; height: 15px; }
+  .btn-yt { background: #cf1414; color: #fff; }
+  .btn-yt:hover { background: #ad0f0f; transform: translateY(-2px); }
+  .btn-yt svg { fill: #fff; width: 17px; height: 17px; }
+
+  /* ── Capstone sub-block (within Strategist) ── */
+  .cap-block { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; margin-top: 100px; }
+  @media (max-width: 900px) { .cap-block { grid-template-columns: 1fr; gap: 40px; margin-top: 68px; } }
+  .cap-text .cap-sub { margin-bottom: 22px; }
+  .cap-text .cap-context { font-size: 1.08rem; color: var(--muted); margin-bottom: 22px; max-width: 34ch; }
+  .cap-text .cap-tag { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.55rem, 3.1vw, 2.4rem);
+    line-height: 1.2; letter-spacing: -0.012em; max-width: 15ch; margin: 0 0 34px; }
+  .cap-text .cap-tag em { font-style: italic; color: var(--brass-2); }
+  /* browser-window mockup */
+  .browser { display: block; border-radius: 11px; overflow: hidden; background: #fff; text-decoration: none;
+    border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(19,23,28,.22); transition: transform .35s ease, box-shadow .35s ease; }
+  .browser:hover { transform: translateY(-6px); box-shadow: 0 40px 90px rgba(19,23,28,.30); }
+  .browser-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #ece6da; border-bottom: 1px solid var(--line); }
+  .browser-bar i { width: 11px; height: 11px; border-radius: 50%; background: #cdc5b6; display: block; }
+  .browser-bar i:nth-child(1) { background: #e0685c; } .browser-bar i:nth-child(2) { background: #e6b04b; } .browser-bar i:nth-child(3) { background: #5cb45f; }
+  .browser-url { margin-left: 10px; flex: 1; background: #fff; border-radius: 5px; padding: 6px 14px; font-family: 'Inter', sans-serif; font-size: 12px; color: #948b7c; letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .browser img { width: 100%; display: block; }
+
+  /* ── Speaker ── */
+  .speaker-top { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 10px; }
+  @media (max-width: 860px) { .speaker-top { grid-template-columns: 1fr; gap: 40px; } }
+  .audio-card { border: 1px solid var(--line-light); border-radius: 6px; padding: 30px 32px; background: rgba(255,255,255,.03); }
+  .audio-card .ac-ey { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: #cfa96a; font-weight: 600; }
+  .audio-card .ac-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 400; margin: 8px 0 20px; color: #fbf7f0; }
+  .audio-card audio { width: 100%; }
+  .follow p { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.35; color: #f2ede4; margin-bottom: 28px; }
+  .subrow { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .feed-eyebrow { margin: 92px 0 26px; }
+  .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 680px) { .video-grid { grid-template-columns: 1fr; max-width: 380px; } }
+  .vcard { display: block; text-decoration: none; color: #fff; border: 1px solid var(--line-light); border-radius: 4px; overflow: hidden; background: rgba(255,255,255,.02); transition: transform .3s ease, border-color .3s ease; }
+  .vcard:hover { transform: translateY(-4px); border-color: rgba(207,169,106,.55); }
+  .vthumb { position: relative; aspect-ratio: 16/9; background: #0c0f13; }
+  .vthumb img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .92; transition: opacity .3s ease; }
+  .vcard:hover .vthumb img { opacity: 1; }
+  .vplay { position: absolute; inset: 0; margin: auto; width: 46px; height: 46px; background: rgba(0,0,0,.55); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px); transition: background .3s ease; }
+  .vplay svg { width: 16px; height: 16px; fill: #fff; margin-left: 2px; }
+  .vcard:hover .vplay { background: var(--brass); }
+  .vbody { padding: 14px 16px 18px; }
+  .vtitle { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 400; line-height: 1.35; color: #f2ede4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .vskeleton { aspect-ratio: 16/9; border-radius: 4px; background: linear-gradient(90deg,#171c22 25%,#232a32 50%,#171c22 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+  @keyframes shimmer { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+  .feed-fallback { grid-column: 1/-1; color: #c9c2b5; font-size: 15px; }
+  .feed-fallback a { color: #cfa96a; }
+
+  /* ── Storyteller ── */
+  .book-line { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 300; font-style: italic; color: var(--ink); max-width: 22ch; margin: 30px 0 6px; line-height: 1.2; }
+  .book-note { color: var(--muted); margin-bottom: 48px; }
+  .chapters { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  @media (max-width: 760px) { .chapters { grid-template-columns: 1fr; } }
+  .chapter { display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: start; border-top: 1px solid var(--line); padding: 32px 0 0; text-decoration: none; color: inherit; transition: border-color .3s ease; }
+  .chapter:hover { border-color: var(--brass); }
+  .chapter-page img { width: 100%; display: block; border: 1px solid var(--line); border-radius: 2px; box-shadow: 0 12px 30px rgba(19,23,28,.16); transition: transform .3s ease, box-shadow .3s ease; }
+  .chapter:hover .chapter-page img { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(19,23,28,.24); }
+  .chapter .cnum { font-size: 12px; letter-spacing: .2em; color: var(--brass-2); font-weight: 600; }
+  .chapter h3 { font-size: 1.4rem; font-weight: 400; margin: 12px 0 12px; }
+  .chapter p { color: var(--muted); font-size: 1rem; }
+  .chapter .read { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+  .chapter .read svg { width: 14px; height: 14px; transition: transform .25s ease; }
+  .chapter:hover .read svg { transform: translateX(5px); }
+  @media (max-width: 520px) { .chapter { grid-template-columns: 96px 1fr; gap: 18px; } }
+
+  /* ── About ── */
+  #about .about-eyebrow { display: flex; justify-content: center; margin-bottom: 40px; }
+  #about .about-copy { max-width: 860px; margin: 64px auto 0; text-align: center; }
+  #about .about-copy .lead { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.55rem, 3.4vw, 2.35rem); line-height: 1.42; color: var(--ink); }
+  #about .contact { margin-top: 44px; }
+
+  /* ── Footer ── */
+  footer { background: var(--ink); color: #9a9284; padding: 90px 0 46px; }
+  .foot-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 44px; border-bottom: 1px solid var(--line-light); }
+  .foot-name { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; color: #f2ede4; }
+  .foot-name .roles { display: block; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: #cfa96a; margin-top: 12px; }
+  .foot-links { display: flex; flex-direction: column; gap: 12px; text-align: right; }
+  .foot-links a { color: #b7afa1; text-decoration: none; font-size: 14px; transition: color .25s ease; }
+  .foot-links a:hover { color: #cfa96a; }
+  .foot-bottom { margin-top: 30px; font-size: 12.5px; color: #6d665b; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2,.6,.2,1), transform .8s cubic-bezier(.2,.6,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body id="top">
+
+<!-- ── NAV ── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-links">
+      <a href="#strategist">Strategist</a>
+      <a href="#speaker">Speaker</a>
+      <a href="#author">Storyteller</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="nav-cta" href="mailto:support@marketingfunnelautomation.com?subject=Hello%20Damian">Get in touch</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Damian Lanfranchi</h1>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
+</header>
+
+<!-- ── 01 · STRATEGIST ── -->
+<section id="strategist">
+  <div class="container reveal">
+    <div class="eyebrow mt-eyebrow"><span class="num">01</span> &nbsp;Business Strategist</div>
+    <p class="lead-para">Damian is the business partner of Todd Brown at Todd Brown, Inc. and the E5 Agency. For over a decade, they have been committed to equipping small business owners and entrepreneurs to generate record sales and new customers with the E5 Method, their unique direct response marketing methodology.</p>
+  </div>
+  <div class="band">
+    <img src="assets/strategist.jpg" alt="Damian Lanfranchi presenting at Top One">
+    <div class="caption">On stage at Top One</div>
+  </div>
+
+  <!-- Capstone — part of Damian's work as a strategist -->
+  <div class="container reveal">
+    <div class="cap-block">
+      <div class="cap-text">
+        <div class="eyebrow cap-sub">Capstone Property Collective</div>
+        <p class="cap-context">Damian is also a founding partner of Capstone Property Collective.</p>
+        <p class="cap-tag">Serving Sellers, <em>Blessing</em> Buyers &amp; Transforming Neighborhoods.</p>
+        <a class="btn btn-ink" href="https://capstonepropertycollective.com" target="_blank" rel="noopener">Visit Capstone Property Collective
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <a class="browser" href="https://capstonepropertycollective.com/about" target="_blank" rel="noopener">
+        <div class="browser-bar"><i></i><i></i><i></i><div class="browser-url">capstonepropertycollective.com/about</div></div>
+        <img src="assets/capstone-founders.jpg" alt="Damian and Adam, founders of Capstone Property Collective">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 02 · SPEAKER ── -->
+<section id="speaker" class="dark on-dark" style="background:#171c22;">
+  <div class="container reveal">
+    <div class="eyebrow mt-eyebrow"><span class="num">02</span> &nbsp;Speaker</div>
+
+    <div class="speaker-top">
+      <div class="audio-card">
+        <div class="ac-ey">Sermon</div>
+        <div class="ac-title">Abraham in Haran</div>
+        <audio controls preload="none" src="assets/sermon-abraham-in-haran.mp3"></audio>
+      </div>
+
+      <div class="follow">
+        <p>Follow and hear from Damian every week at Brand New Every Day.</p>
+        <div class="subrow">
+        <a class="btn btn-light" href="https://brandneweveryday.com" target="_blank" rel="noopener">Visit BrandNewEveryDay.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-yt" href="https://www.youtube.com/@thebrandneweveryday?sub_confirmation=1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          Subscribe on YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="eyebrow feed-eyebrow">Latest from Brand New Every Day</div>
+    <div class="video-grid" id="video-grid">
+      <div class="vskeleton"></div><div class="vskeleton"></div><div class="vskeleton"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 04 · AUTHOR ── -->
+<section id="author" class="paper2">
+  <div class="container reveal">
+    <div class="eyebrow mt-eyebrow"><span class="num">03</span> &nbsp;Storyteller</div>
+    <p class="book-line">Samples from Damian's book, <em>From Brooklyn to Windy Hill.</em></p>
+    <p class="book-note">Read a sample chapter.</p>
+    <div class="chapters">
+      <a class="chapter" href="chapters/what-would-you-consider-your-motto.pdf" target="_blank" rel="noopener">
+        <div class="chapter-page"><img src="assets/chapter-motto.jpg" alt="First page of the chapter" loading="lazy"></div>
+        <div class="chapter-info">
+          <div class="cnum">CHAPTER</div>
+          <h3>What would you consider your motto?</h3>
+          <p>A nickname that never stuck, a leap with no net, and the answer that has defined him ever since: "There is no plan B."</p>
+          <span class="read">Read the chapter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="chapter" href="chapters/why-is-food-important-to-you.pdf" target="_blank" rel="noopener">
+        <div class="chapter-page"><img src="assets/chapter-food.jpg" alt="First page of the chapter" loading="lazy"></div>
+        <div class="chapter-info">
+          <div class="cnum">CHAPTER</div>
+          <h3>Why is food important to you?</h3>
+          <p>"As an Italian, food is not just food. It is identity." Brooklyn, his mother's kitchen, and a butcher named Nickie.</p>
+          <span class="read">Read the chapter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 05 · ABOUT ── -->
+<section id="about">
+  <div class="container reveal">
+    <div class="about-eyebrow"><div class="eyebrow">About</div></div>
+  </div>
+  <div class="band">
+    <img src="assets/family.jpg" alt="Damian and his three daughters overlooking the valley">
+    <div class="caption">With my three girls</div>
+  </div>
+  <div class="container reveal">
+    <div class="about-copy">
+      <p class="lead">Damian lives in Sarasota, Florida along with his three beloved daughters. He is an avid artist, musician, and wildly passionate chef.</p>
+      <div class="contact">
+        <a class="btn btn-ink" href="mailto:support@marketingfunnelautomation.com?subject=Hello%20Damian">Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-name">Damian Lanfranchi<span class="roles">Business Strategist · Speaker · Storyteller</span></div>
+      <div class="foot-links">
+        <a href="https://capstonepropertycollective.com" target="_blank" rel="noopener">Capstone Property Collective</a>
+        <a href="https://brandneweveryday.com" target="_blank" rel="noopener">Brand New Every Day</a>
+        <a href="https://www.youtube.com/@thebrandneweveryday" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:support@marketingfunnelautomation.com">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; <span id="year">2026</span> Damian Lanfranchi. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  try { document.getElementById('year').textContent = new Date().getFullYear(); } catch (e) {}
+
+  var nav = document.getElementById('nav');
+  function onScroll() { if (window.scrollY > 60) nav.classList.add('solid'); else nav.classList.remove('solid'); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  /* Latest videos — YouTube RSS, no API key */
+  var CHANNEL_ID = 'UCRYJFAkGHGD_DGGjpkpEenw';
+  var CHANNEL_URL = 'https://www.youtube.com/@thebrandneweveryday/videos';
+  var RSS = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID;
+  var grid = document.getElementById('video-grid');
+  function idFromLink(link, guid) {
+    var s = (link || '') + ' ' + (guid || '');
+    var m = s.match(/(?:v=|\/shorts\/|\/embed\/|youtu\.be\/|yt:video:)([\w-]{11})/);
+    if (m) return m[1];
+    m = (link || '').match(/([\w-]{11})(?:[?&#].*)?$/); return m ? m[1] : '';
+  }
+  function fallback() { grid.innerHTML = '<div class="feed-fallback">See the newest on <a href="' + CHANNEL_URL + '" target="_blank" rel="noopener">the Brand New Every Day channel</a>.</div>'; }
+  function isShort(link, title) { return /\/shorts\//.test(link || '') || /#shorts/i.test(title || ''); }
+  function render(list) {
+    if (!list || !list.length) { fallback(); return; }
+    grid.innerHTML = list.slice(0, 3).map(function (v) {
+      var max = 'https://i.ytimg.com/vi/' + v.id + '/maxresdefault.jpg';
+      var hq = 'https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg';
+      var url = 'https://www.youtube.com/watch?v=' + v.id;
+      var title = (v.title || '').replace(/</g, '&lt;');
+      return '<a class="vcard" href="' + url + '" target="_blank" rel="noopener">' +
+        '<div class="vthumb"><img src="' + max + '" onerror="this.onerror=null;this.src=\'' + hq + '\'" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy">' +
+        '<div class="vplay"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div></div>' +
+        '<div class="vbody"><div class="vtitle">' + title + '</div></div></a>';
+    }).join('');
+  }
+  // Long-form only. Curated backfill (inlined so it works from file:// too) merged with any
+  // new long-form from the live feed, newest first. Shorts are excluded.
+  var CURATED = [{"id":"MEZETMdhJpQ","title":"What Does the Bible Really Say About Money?","date":"2026-07-20"},{"id":"liABEWX15Gg","title":"What the Bible Says About Work and Your Purpose","date":"2026-07-13"},{"id":"1oRjYuqRvfc","title":"4 Biblical Secrets to Staying Broke","date":"2026-06-22"},{"id":"7srNFkMLH6I","title":"What If the Thing You're Denying Most Delights God?","date":"2026-06-17"},{"id":"RbTjvP__cm8","title":"God Is in the Business of Upgrades","date":"2026-06-09"},{"id":"VbCc8qC5xF0","title":"How to Pray With Power and Purpose (3 Keys From Gethsemane)","date":"2026-06-06"},{"id":"aaRHepHPh24","title":"Prosperity Is an Inside Job","date":"2026-05-14"},{"id":"0y4WlxlPiBc","title":"How To Change Your Circle (3 Biblical Steps)","date":"2026-05-07"},{"id":"N1_hKfRsdRg","title":"Is Your Circle Costing You Your Destiny?","date":"2026-04-30"},{"id":"f9rAgqx0Dxo","title":"The Best Investment You Can Make Today (Not Crypto, Tesla or Real Estate)","date":"2026-04-23"},{"id":"8iKISK9EJSA","title":"\"God, Please Speak!\" (He Already Did — 6 Times)","date":"2026-04-20"},{"id":"rFwbdV5SYJo","title":"Is \"Waiting On God\" Just An Excuse?","date":"2026-04-16"},{"id":"RgOkBLsRUNo","title":"What If God Is Waiting On You?","date":"2026-04-07"},{"id":"Q-yIb4H3GkA","title":"What If the Key to More Abundance in Your Life Is More Risk?","date":"2026-03-31"},{"id":"e60nH0gCq8w","title":"A Prostitute in Jesus' Family Tree Changed Everything | Finding Your Purpose in God","date":"2026-03-23"},{"id":"1hMKiTsKmwQ","title":"God Doesn't Waste Your Layoff","date":"2026-03-10"},{"id":"jwor_W3R0t0","title":"Awake Asleep","date":"2026-03-04"},{"id":"D_Fdp1JEWZo","title":"God Doesn't Do Math, We Do","date":"2026-03-02"},{"id":"_5zKUz5incM","title":"Let Your Yes Be Yes","date":"2026-02-27"},{"id":"Qp9UA4dV-R8","title":"The Secret of Joy","date":"2026-02-23"},{"id":"nsZ5Ewyzt1Y","title":"Stop Asking Why — Ask Who, How, What","date":"2026-02-16"},{"id":"DcaTBUCnMQA","title":"Silent Marriage Killer","date":"2026-02-06"}];
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS))
+    .then(function (r) { return r.json(); })
+    .then(function (d) { return (d && d.status === 'ok' && d.items) ? d.items : []; })
+    .catch(function () { return []; })
+    .then(function (rss) {
+      var map = {};
+      CURATED.forEach(function (v) { if (v && v.id) map[v.id] = { id: v.id, title: v.title, date: v.date || '' }; });
+      rss.forEach(function (it) {
+        var id = idFromLink(it.link, it.guid);
+        if (!id || isShort(it.link, it.title)) return;
+        if (!map[id]) map[id] = { id: id, title: it.title, date: (it.pubDate || '').slice(0, 10) };
+      });
+      var list = Object.keys(map).map(function (k) { return map[k]; });
+      list.sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+      render(list);
+    }).catch(fallback);
+})();
+</script>
+</body>
+</html>
